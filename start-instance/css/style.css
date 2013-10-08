@@ -1,0 +1,12 @@
+.table-fixed-height {
+  height: 175px;
+  overflow-y: scroll;	
+}
+
+.table-head {
+	margin-bottom: 0;
+}
+
+tr {
+	cursor: pointer;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>OpenStack - Start Instance</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-7">
+      <h2>Start Instance</h2>
+      <form class="form" role="form">
+        <h3>Instance Details</h3>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <label class="control-label">Name</label>
+              <input class="form-control">
+            </div>
+            <div class="col-lg-3">
+              <label class="control-label">Number</label>
+              <input class="form-control" value="1">
+            </div>
+            <div class="col-lg-3">
+              <label class="control-label">Availability Zone</label>
+              <select class="form-control"><optgroup label="France"><option>fr-1</option><option>fr-2</option><option>fr-3</option><option>fr-4</option></optgroup><optgroup label="Germany"><option>de-1</option></optgroup></select>
+            </div>
+          </div>          
+        </div>
+        <div class="form-group">
+          <label class="control-label">Instance Boot Source</label>
+          <select class="form-control" id="id_source_type" name="source_type" data-original-title="">
+          <option value="image_id">Boot from image.</option>
+          <option value="instance_snapshot_id">Boot from snapshot.</option>
+          <option value="volume_id">Boot from volume.</option>
+          <option value="volume_image_id">Boot from image (creates a new volume).</option>
+          <option value="volume_snapshot_id">Boot from volume snapshot (creates a new volume).</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#cloudwatt-images" data-toggle="tab">Cloudwatt</a></li>
+            <li><a href="#community-images" data-toggle="tab">Community</a></li> 
+            <li><a href="#my-images" data-toggle="tab">My Images</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="cloudwatt-images">            
+              <div class="table-fixed-height">
+                <table class="table table-striped table-condensed">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Windows Server 2008 R2 SP1</td>
+                    </tr>
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Windows Server 2012</td>
+                    </tr>
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Red Hat Enterprise Linux 6.3</td>
+                    </tr>
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Red Hat Enterprise Linux 6.4</td>
+                    </tr>   
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Ubuntu 12.04 LTS (Precise Pangolin)</td>
+                    </tr>   
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Ubuntu 12.10 (Quantal Quetzal)</td>
+                    </tr> 
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Ubuntu 13.04 (Raring Ringtail)</td>
+                    </tr>                 
+                  </tbody>
+                </table>
+              </div>          
+            </div>  
+            <div class="tab-pane" id="community-images">            
+              <div class="table-fixed-height">
+                <table class="table table-striped table-condensed">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>CentOS 6.4</td>
+                    </tr>  
+                    <tr>
+                      <td><input name="img" type="radio"/></td>
+                      <td>Redmine 12.1 (CentOS 6.4)</td>
+                    </tr>              
+                  </tbody>
+                </table>
+              </div>          
+            </div>
+            <div class="tab-pane" id="my-images">            
+              <div class="table-fixed-height">
+                <table class="table table-striped table-condensed">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>You don't have any saved images. <a href="#">Add one</a>.</td>
+                    </tr>              
+                  </tbody>
+                </table>
+              </div>          
+            </div>
+          </div>    
+        </div>
+        <div class="form-group">
+            <label class="control-label">Flavor</label>
+            <div class="table-fixed-height">
+            <table class="table table-striped table-condensed">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>VCPUs</th>
+                  <th>Root / Ephemeral Disk</th>
+                  <th>RAM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input name="flavor" type="radio"/></td>
+                  <td>m1.small</td>
+                  <td>1</td>
+                  <td>50 GB / 0 GB</td>
+                  <td>1,024 MB</td>
+                </tr>
+                <tr>
+                  <td><input name="flavor" type="radio"/></td>
+                  <td>m1.medium</td>
+                  <td>2</td>
+                  <td>100 GB / 0 GB</td>
+                  <td>2,048 MB</td>
+                </tr>
+                <tr>
+                  <td><input name="flavor" type="radio"/></td>
+                  <td>m2.medium</td>
+                  <td>2</td>
+                  <td>200 GB / 0 GB</td>
+                  <td>4,096 MB</td>
+                </tr>
+                <tr>
+                  <td><input name="flavor" type="radio"/></td>
+                  <td>m1.large</td>
+                  <td>4</td>
+                  <td>400 GB / 0 GB</td>
+                  <td>16,384 MB</td>
+                </tr>
+                <tr>
+                  <td><input name="flavor" type="radio"/></td>
+                  <td>m2.large</td>
+                  <td>4</td>
+                  <td>400 GB / 0 GB</td>
+                  <td>32,768 MB</td>
+                </tr>
+                <tr>
+                  <td><input name="flavor" type="radio"/></td>
+                  <td>m1.xlarge</td>
+                  <td>6</td>
+                  <td>600 GB / 0 GB</td>
+                  <td>65,536 MB</td>
+                </tr>
+                <tr>
+                  <td><input name="flavor" type="radio"/></td>
+                  <td>m1.mlarge</td>
+                  <td>12</td>
+                  <td>800 GB / 0 GB</td>
+                  <td>98,304 MB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>         
+        </div>
+        <h3>Access &amp; Security</h3>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <select class="form-control">
+                  <option>No keypairs available</option>
+                </select>
+                <span class="input-group-btn"><a href="#" class="btn btn-default">+</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <label class="control-label">Admin Pass</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label class="control-label">Confirm Admin Pass</label>
+              <input type="email" class="form-control">
+            </div>
+          </div>         
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">             
+              <label class="control-label">Networks</label>
+              <div class="input">
+                <ul>
+                  <li>
+                    <label>
+                      <input checked="checked" name="groups" type="checkbox" value="default"> Internet
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <label class="control-label">Security Groups</label>
+              <div class="input">
+                <ul>
+                  <li>
+                    <label><input checked="checked" name="groups" type="checkbox" value="default"> Default
+                    </label></li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary pull-right">Launch Instance</a>
+        <br/>
+        <hr/>
+      </form>
+    </div>
+    <div class="col-lg-5"> </div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

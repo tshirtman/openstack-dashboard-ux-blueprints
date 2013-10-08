@@ -1,2 +1,2 @@
-openstack-dashboard-ux-start-instance
-=====================================
+OpenStack UX Blueprints
+=======================
