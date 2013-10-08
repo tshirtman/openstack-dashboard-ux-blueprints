@@ -1,6 +1,6 @@
 .table-fixed-height {
-  height: 175px;
-  overflow-y: scroll;	
+  height: 300px;
+  overflow-y: auto;	
 }
 
 .table-head {
@@ -9,4 +9,13 @@
 
 tr {
 	cursor: pointer;
+}
+
+h5 {
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+.v-align-bottom {
+
 }

@@ -35,56 +35,58 @@
           </div>          
         </div>
         <div class="form-group">
-          <label class="control-label">Instance Boot Source</label>
-          <select class="form-control" id="id_source_type" name="source_type" data-original-title="">
-          <option value="image_id">Boot from image.</option>
-          <option value="instance_snapshot_id">Boot from snapshot.</option>
-          <option value="volume_id">Boot from volume.</option>
-          <option value="volume_image_id">Boot from image (creates a new volume).</option>
-          <option value="volume_snapshot_id">Boot from volume snapshot (creates a new volume).</option>
-          </select>
+          <label class="control-label">Root Disk</label>
+          <ul class="nav nav-pills">
+            <li class="active"><a href="step_1.html">Ephemeral</a></li>
+            <li><a href="step_1_volume.html">Volume-backed</a></li>
+          </ul>
         </div>
+
+
         <div class="form-group">
+          <label class="control-label">Boot Source</label>
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#cloudwatt-images" data-toggle="tab">Cloudwatt</a></li>
-            <li><a href="#community-images" data-toggle="tab">Community</a></li> 
-            <li><a href="#my-images" data-toggle="tab">My Images</a></li>
+            <li class="active"><a href="#cloudwatt-images" data-toggle="tab">Public <span class="badge">7</span></a></li>
+            <li><a href="#my-images" data-toggle="tab">Project <span class="badge">0</span></a></li>
+            <li><a href="#community-images" data-toggle="tab">Shared with me <span class="badge">0</span></a></li> 
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="cloudwatt-images">            
               <div class="table-fixed-height">
-                <table class="table table-striped table-condensed">
+                <table class="table table-bordered">
                   <thead>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Windows Server 2008 R2 SP1</td>
-                    </tr>
+                      <td rowspan="5"><h5>Images</h5></td>
+                      <td>Image name one</td>
+                      <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>  
                     <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Windows Server 2012</td>
-                    </tr>
-                    <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Red Hat Enterprise Linux 6.3</td>
-                    </tr>
-                    <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Red Hat Enterprise Linux 6.4</td>
+                      <td>Image name two</td>
+                      <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
                     </tr>   
                     <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Ubuntu 12.04 LTS (Precise Pangolin)</td>
-                    </tr>   
-                    <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Ubuntu 12.10 (Quantal Quetzal)</td>
+                      <td>Image name three</td>
+                      <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
                     </tr> 
                     <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Ubuntu 13.04 (Raring Ringtail)</td>
-                    </tr>                 
+                      <td>Image name four</td>
+                      <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Image name five</td>
+                      <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr> 
+                    <tr>
+                      <td rowspan="2"><h5>Image Snapshots</h5></td>
+                      <td>Snapshot name one - Lorem Ipsum Lorem ipsum dolor sit amet.</td>
+                      <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</td>
+                    </tr>
+                    <tr>
+                      <td>Snapshot name two</td>
+                      <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>                  
                   </tbody>
                 </table>
               </div>          
@@ -96,13 +98,8 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>CentOS 6.4</td>
-                    </tr>  
-                    <tr>
-                      <td><input name="img" type="radio"/></td>
-                      <td>Redmine 12.1 (CentOS 6.4)</td>
-                    </tr>              
+                      <td>No image shared with you.</td>
+                    </tr>               
                   </tbody>
                 </table>
               </div>          
@@ -114,8 +111,8 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>You don't have any saved images. <a href="#">Add one</a>.</td>
-                    </tr>              
+                      <td>You have no image or snapshot. <a href="#" class="btn btn-xs btn-primary">Add one</a></td>
+                    </tr>    
                   </tbody>
                 </table>
               </div>          
