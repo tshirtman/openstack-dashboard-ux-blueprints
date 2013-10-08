@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>OpenStack - Start Instance</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-7">
+      <h2>Start Instance</h2>
+      <form class="form" role="form">
+        <ol class="breadcrumb">
+          <li><a href="step_1.html">Instance</a></li>
+          <li class="active">Flavor</li>
+          <li><a href="step_3.html">Access &amp Security</a></li>
+        </ol>
+        <h3>Access &amp; Security</h3>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <select class="form-control">
+                  <option>No keypairs available</option>
+                </select>
+                <span class="input-group-btn"><a href="#" class="btn btn-default">+</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <label class="control-label">Admin Pass</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="col-lg-6">
+              <label class="control-label">Confirm Admin Pass</label>
+              <input type="email" class="form-control">
+            </div>
+          </div>         
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">             
+              <label class="control-label">Networks</label>
+              <div class="input">
+                <ul>
+                  <li>
+                    <label>
+                      <input checked="checked" name="groups" type="checkbox" value="default"> Internet
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <label class="control-label">Security Groups</label>
+              <div class="input">
+                <ul>
+                  <li>
+                    <label><input checked="checked" name="groups" type="checkbox" value="default"> Default
+                    </label></li></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#"><< Back</a>
+        <a href="#" class="btn btn-primary pull-right">Launch Instance</a>
+        <br/>
+        <hr/>
+      </form>
+    </div>
+    <div class="col-lg-5"> </div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
