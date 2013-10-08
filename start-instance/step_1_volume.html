@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>OpenStack - Start Instance</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="navbar navbar-default navbar-static-top">
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-2 left-bar">Menu</div>
+    <div class="col-lg-7 main">
+      <h2>Start Instance</h2>
+      <form class="form" role="form">
+        <ol class="breadcrumb">
+          <li class="active">Instance</li>
+          <li><a href="step_volume.html">Boot Volume</a></li>
+          <li><a href="step_volume.html">Flavor</a></li>
+          <li><a href="step_3.html">Access &amp Security</a></li>
+        </ol>
+        <h3>Instance Details</h3>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6">
+              <label class="control-label">Name</label>
+              <input class="form-control">
+            </div>
+            <div class="col-lg-3">
+              <label class="control-label">Number</label>
+              <input class="form-control" value="1">
+            </div>
+            <div class="col-lg-3">
+              <label class="control-label">Availability Zone</label>
+              <select class="form-control"><optgroup label="France"><option>fr-1</option><option>fr-2</option><option>fr-3</option><option>fr-4</option></optgroup><optgroup label="Germany"><option>de-1</option></optgroup></select>
+            </div>
+          </div>          
+        </div>
+        <div class="form-group">
+          <label class="control-label">Root Disk</label>
+          <ul class="nav nav-pills">
+            <li><a href="step_1.html">Ephemeral</a></li>
+            <li class="active"><a href="step_1_volume.html">Volume-backed</a></li>
+          </ul>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Boot Source</label>
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#cloudwatt-images" data-toggle="tab">Public <span class="badge">7</span></a></li>
+            <li><a href="#my-images" data-toggle="tab">Project <span class="badge">0</span></a></li>
+            <li><a href="#community-images" data-toggle="tab">Shared with me <span class="badge">0</span></a></li> 
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="cloudwatt-images">            
+              <div>
+                <table class="table table-bordered">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="5"><h5>Images</h5><h6>(creates new volume)</h6></td>
+                      <td>Image name one</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>  
+                    <tr>
+                      <td>Image name two</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>   
+                    <tr>
+                      <td>Image name three</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Image name four</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Image name five</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr> 
+                    <tr>
+                      <td rowspan="2"><h5>Image Snapshots</h5><h6>(creates new volume)</h6></td>
+                      <td>Snapshot name one - Lorem Ipsum Lorem ipsum dolor sit.</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</td>
+                    </tr>
+                    <tr>
+                      <td>Snapshot name two</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>   
+                    <tr>
+                      <td rowspan="2"><h5>Volume Snapshots</h5><h6>(creates new volume)</h6></td>
+                      <td>Snapshot name one.</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</td>
+                    </tr>
+                    <tr>
+                      <td>Snapshot name two</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>   
+                    <tr>
+                      <td rowspan="3"><h5>Volume</h5><h6>(use this volume)</h6></td>
+                      <td>Volume name one.</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</td>
+                    </tr>
+                    <tr>
+                      <td>Volume name two</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>      
+                    <tr>
+                      <td>Volume name three</td>
+                      <td><a href="step_volume.html" class="btn btn-primary btn-xs">Select »</a></td>
+                    </tr>              
+                  </tbody>
+                </table>
+              </div>          
+            </div>  
+            <div class="tab-pane" id="community-images">            
+              <div>
+                <table class="table table-bordered">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>No image shared with you.</td>
+                    </tr>               
+                  </tbody>
+                </table>
+              </div>          
+            </div>
+            <div class="tab-pane" id="my-images">            
+              <div>
+                <table class="table table-bordered">
+                  <thead>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>You have no image or snapshot. <a href="#" class="btn btn-xs btn-primary">Add one</a></td>
+                    </tr>    
+                  </tbody>
+                </table>
+              </div>          
+            </div>
+          </div>    
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-3 right-bar">Help texts</div>
+  </div>
+  </div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
