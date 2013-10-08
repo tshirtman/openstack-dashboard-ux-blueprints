@@ -45,19 +45,17 @@
             </div>
           </div>         
         </div>
+        <h3>Access</h3>
         <div class="form-group">
           <div class="row">
-            <div class="col-lg-6">             
+            <div class="col-lg-6 border-right">         
               <label class="control-label">Networks</label>
-              <div class="input">
-                <ul>
-                  <li>
-                    <label>
-                      <input checked="checked" name="groups" type="checkbox" value="default"> Internet
-                    </label>
-                  </li>
-                </ul>
-              </div>
+              <h6>Selected Networks</h6>
+              <ul id="selected_network" class="networklist"></ul>
+              <h6>Available networks</h6>
+              <ul id="available_network" class="networklist">
+                <li>internet<em class="network_id">(7b07d545-53da-4897-abbd-dfe142db0fc2)</em><a href="#" class="btn btn-primary btn-xs pull-right"> + </a></li>
+              </ul>
             </div>
             <div class="col-lg-6">
               <label class="control-label">Security Groups</label>
@@ -65,17 +63,17 @@
                 <ul>
                   <li>
                     <label><input checked="checked" name="groups" type="checkbox" value="default"> Default
-                    </label></li></ul>
+                    </label>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-          <a href="#" class="btn btn-sm btn-default">Add post-creation script</a>
         </div>
         <hr/>
-        <a href="step_2.html">« Back</a>
-        <div class="pull-right">
-          <a href="#" class="btn btn-primary">Launch Instance</a>
-        </div>
+        <a href="step_2.html">« Back</a> /
+        <a href="#" class="">Add post-creation script</a> 
+        <a href="#" class="btn btn-primary pull-right">Launch Instance</a>
       </form>
     </div>
     <div class="col-lg-3 right-bar">Help texts</div>

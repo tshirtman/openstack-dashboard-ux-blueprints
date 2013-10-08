@@ -35,6 +35,10 @@
 	height: 650px;
 }
 
+.border-right {
+	border-right: 1px solid #eeeeee;
+}
+
 tr {
 	cursor: pointer;
 }
@@ -46,4 +50,43 @@ h5 {
 
 .nav > li > a {
 	padding: 6px 22px;
+}
+
+#selected_network {
+	margin-bottom: 1.5em;
+	counter-reset: v1 0;
+	background: #edf9ff;
+	border: 1px solid #c0d9e4;
+	height: 40px;
+}
+
+.networklist {
+	padding: 6px;
+	background: #eeeeee;
+	border: 1px solid #cccccc;
+	min-height: 2em;
+	width: auto !important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.networklist li {
+	list-style-type: none;
+	margin: 6px auto;
+	padding: 5px;
+	background: #ffffff;
+	border: 1px solid #aaaaaa;
+	line-height: 18px;
+	border-radius: 3px;
+	cursor: move;
+	padding-left: 23px;
+}
+
+.networklist li em {
+	font-size: 0.5em;
+	line-height: 1em;
+	color: #999999;
+	font-style: normal;
+	margin-left: 0.8em;
 }
