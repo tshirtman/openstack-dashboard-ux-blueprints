@@ -7,17 +7,20 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+  <div class="navbar navbar-default navbar-static-top">
+  </div>
   <div class="container">
   <div class="row">
-    <div class="col-lg-7">
+    <div class="col-lg-2 left-bar">Menu</div>
+    <div class="col-lg-7 main">
       <h2>Start Instance</h2>
       <form class="form" role="form">
         <ol class="breadcrumb">
           <li><a href="step_1.html">Instance</a></li>
-          <li class="active">Flavor</li>
-          <li><a href="step_3.html">Access &amp Security</a></li>
+          <li><a href="step_2.html">Flavor</a></li>
+          <li class="active">Access &amp Security</li>
         </ol>
-        <h3>Access &amp; Security</h3>
+        <h3>Security</h3>
         <div class="form-group">
           <div class="row">
             <div class="col-lg-6">
@@ -66,14 +69,16 @@
               </div>
             </div>
           </div>
+          <a href="#" class="btn btn-sm btn-default">Add post-creation script</a>
         </div>
-        <a href="#"><< Back</a>
-        <a href="#" class="btn btn-primary pull-right">Launch Instance</a>
-        <br/>
         <hr/>
+        <a href="step_2.html">« Back</a>
+        <div class="pull-right">
+          <a href="#" class="btn btn-primary">Launch Instance</a>
+        </div>
       </form>
     </div>
-    <div class="col-lg-5"> </div>
+    <div class="col-lg-3 right-bar">Help texts</div>
 </div>
 </div>
 <script src="js/jquery.js"></script>

@@ -1,3 +1,13 @@
+@media (min-width: 600px) {
+	.container {
+		max-width: 1600px;
+	}	
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
 .table-fixed-height {
   height: 300px;
   overflow-y: auto;	
@@ -5,6 +15,24 @@
 
 .table-head {
 	margin-bottom: 0;
+}
+
+.menu-bar {
+	height: 30px;
+
+	margin:10px;
+}
+
+.main {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.right-bar, .left-bar {
+    background-color: #f5f5f5;
+    padding: 30px;
+    color: gray;
+	height: 650px;
 }
 
 tr {
@@ -16,6 +44,6 @@ h5 {
 	vertical-align: bottom;
 }
 
-.v-align-bottom {
-
+.nav > li > a {
+	padding: 6px 22px;
 }
