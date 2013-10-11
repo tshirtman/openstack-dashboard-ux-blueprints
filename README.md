@@ -10,6 +10,8 @@ OpenStack UX Blueprints
 
 ### Blueprints
 
+A draft with more details and screenshots is on [Google Doc](https://docs.google.com/document/d/1hUdmyxpVxbYwgGtPbzDsBUXsv0_rtKbfgCHYxOgFjlo). Feel free to add comments.
+
 - [Enhance UX of Launch Instance Form](https://blueprints.launchpad.net/horizon/+spec/launch-instance-ux-enhancement)
 - [Enhance the Selection of a Flavor and an Image](https://blueprints.launchpad.net/horizon/+spec/image-flavor-selection-ux-enhancement)
 - [Enhance UX of Instance Boot Source](https://blueprints.launchpad.net/horizon/+spec/instance-boot-source-enhancement)
