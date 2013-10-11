@@ -1,7 +1,5 @@
-OpenStack UX Blueprints
-=======================
-
-## Launch Instance
+Launch Instance UX Blueprints
+=============================
 
 ### Prototype
 
