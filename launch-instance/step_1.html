@@ -5,21 +5,38 @@
     <title>OpenStack - Launch Instance</title>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/wizard.css" rel="stylesheet">
   </head>
   <body>
-  <div class="navbar navbar-default navbar-static-top">
-  </div>
-  <div class="container">
+    <div class="left-bar"><img src="img/left-menu.png"/></div>
+  <div class="modal in">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Launch Instance</h4>
+          </div>
+      <div class="modal-body">
   <div class="row">
-    <div class="col-lg-2 left-bar">Menu</div>
-    <div class="col-lg-7 main">
-      <h2>Launch Instance</h2>
+    <div class="col-lg-8 main">
       <form class="form" role="form">
-        <ol class="breadcrumb">
-          <li class="active">Instance</li>
-          <li><a href="step_2.html">Flavor</a></li>
-          <li><a href="step_3.html">Access &amp Security</a></li>
-        </ol>
+        <div class="wizard">
+          <ul class="steps">
+            <li class="active">
+              1 - Instance
+              <span class="chevron" />
+            </li>
+
+            <li>
+              2 - <a href="step_2.html">Flavor</a>
+              <span class="chevron" />
+            </li>
+            <li>
+              3 - <a href="step_3.html">Access &amp Security</a>
+              <span class="chevron" />
+            </li>
+          </ul>
+        </div>
         <h3>Instance Details</h3>
         <div class="form-group">
           <div class="row">
@@ -122,10 +139,22 @@
         </div>
       </form>
     </div>
-    <div class="col-lg-3 right-bar">Help texts</div>
+    <div class="col-lg-4 right-bar">
+      <p><h3>Help texts</h3><h4>Lorem ipsum dolor sit amet</h4>Consectetur adipiscing elit. Nullam vel rhoncus felis, id facilisis orci. Pellentesque eget tortor vitae est cursus gravida. Aenean eget mauris eu dolor luctus dictum. Etiam eget justo sem.</p>
+      <p><h4>Duis vel quam porttitor</h4>Lacinia elit id, molestie turpis. Fusce vel posuere felis, eu ornare massa. Integer vitae lectus at dui iaculis auctor nec sed lorem. Fusce elementum ac nisl sit amet rutrum.</p><p><h4>Duis convallis lacus ac lectus</h4>Sit amet facilisis magna interdum. Nunc ac est sapien. Vestibulum aliquam turpis eget urna rhoncus, a cursus mi egestas.</p><p><h4>Quisque at felis sit amet</h4> Sed id dui ullamcorper, accumsan felis et, molestie lectus. Nullam nulla magna, interdum quis semper in, ullamcorper et magna. Aenean accumsan consequat mi, in consequat enim. Cras commodo purus odio, et adipiscing tortor malesuada non.</p></div>
+</div>
+</div>
+<div class="modal-footer">
+  You need to select a boot source
+              <button type="button" class="btn btn-default">Close</button>
+            </div>
+            </div>
+</div>
+
 </div>
 <div><p class="text-center"><a href="https://docs.google.com/document/d/1hUdmyxpVxbYwgGtPbzDsBUXsv0_rtKbfgCHYxOgFjlo">Learn more about this prototype.</a></p></div>
 </div>
+<div class="modal-backdrop  in"></div>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
