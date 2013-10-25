@@ -6,12 +6,17 @@
 .wizard {
   position: relative;
   overflow: hidden;
+  /**
   background-color: #f9f9f9;
   border: 1px solid #d4d4d4;
+  */  
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
   *zoom: 1;
+ /** margin-bottom: -6px;
+margin-top: -31px;
+margin-left: 12%;*/
 }
 
 .wizard:before,
@@ -35,11 +40,10 @@
 .wizard ul li {
   position: relative;
   float: left;
-  height: 46px;
+  height: 31px;
   padding: 0 20px 0 30px;
   margin: 0;
-  font-size: 16px;
-  line-height: 46px;
+  line-height: 31px;
   color: #999999;
   cursor: default;
   background: #ededed;
@@ -48,22 +52,22 @@
 .wizard ul li .chevron {
   position: absolute;
   top: 0;
-  right: -14px;
+  right: -10px;
   z-index: 1;
   display: block;
-  border: 24px solid transparent;
+  border: 16px solid transparent;
   border-right: 0;
-  border-left: 14px solid #d4d4d4;
+  border-left: 10px solid #d4d4d4;
 }
 
 .wizard ul li .chevron:before {
   position: absolute;
-  top: -24px;
+  top: -16px;
   right: 1px;
   display: block;
-  border: 24px solid transparent;
+  border: 16px solid transparent;
   border-right: 0;
-  border-left: 14px solid #ededed;
+  border-left: 10px solid #ededed;
   content: "";
 }
 
@@ -78,20 +82,20 @@
 }
 
 .wizard ul li.complete:hover .chevron:before {
-  border-left: 14px solid #e7eff8;
+  border-left: 10px solid #e7eff8;
 }
 
 .wizard ul li.complete .chevron:before {
-  border-left: 14px solid #f3f4f5;
+  border-left: 10px solid #f3f4f5;
 }
 
 .wizard ul li.active {
-  color: #3a87ad;
-  background: #f1f6fc;
+  color: #ffffff;
+  background-color: #428bca;
 }
 
 .wizard ul li.active .chevron:before {
-  border-left: 14px solid #f1f6fc;
+  border-left: 10px solid #428bca;
 }
 
 .wizard ul li .badge {

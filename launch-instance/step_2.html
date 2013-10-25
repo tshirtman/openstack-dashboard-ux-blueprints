@@ -1,97 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>OpenStack - Launch Instance</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-  <div class="navbar navbar-default navbar-static-top">
-  </div>
-  <div class="container">
-  <div class="row">
-    <div class="col-lg-2 left-bar">Menu</div>
-    <div class="col-lg-7 main">
-      <h2>Launch Instance</h2>
-      <form class="form" role="form">
-        <ol class="breadcrumb">
-          <li><a href="step_1.html">Instance</a></li>
-          <li class="active">Flavor</li>
-          <li><a href="step_3.html">Access &amp Security</a></li>
-        </ol>
-        <h3>Flavor Details</h3>
-        <div class="form-group">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>VCPUs</th>
-                <th>Root / Ephemeral Disk</th>
-                <th>RAM</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>m1.small</td>
-                <td>1</td>
-                <td>50 GB / 0 GB</td>
-                <td>1,024 MB</td>
-                <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
-              </tr>
-              <tr>
-                <td>m1.medium</td>
-                <td>2</td>
-                <td>100 GB / 0 GB</td>
-                <td>2,048 MB</td>
-                <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
-              </tr>
-              <tr>
-                <td>m2.medium</td>
-                <td>2</td>
-                <td>200 GB / 0 GB</td>
-                <td>4,096 MB</td>
-                <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
-              </tr>
-              <tr>
-                <td>m1.large</td>
-                <td>4</td>
-                <td>400 GB / 0 GB</td>
-                <td>16,384 MB</td>
-                <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
-              </tr>
-              <tr>
-                <td>m2.large</td>
-                <td>4</td>
-                <td>400 GB / 0 GB</td>
-                <td>32,768 MB</td>
-                <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
-              </tr>
-              <tr>
-                <td>m1.xlarge</td>
-                <td>6</td>
-                <td>600 GB / 0 GB</td>
-                <td>65,536 MB</td>
-                <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
-              </tr>
-              <tr>
-                <td>m1.mlarge</td>
-                <td>12</td>
-                <td>800 GB / 0 GB</td>
-                <td>98,304 MB</td>
-                <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
-              </tr>
-            </tbody>
-          </table>        
+<head>
+  <meta charset="utf-8">
+  <title>OpenStack - Launch Instance</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/wizard.css" rel="stylesheet">
+</head>
+<body>
+  <div class="left-bar"><img src="img/left-menu.png" alt="menu-mockup"/></div>
+  <div class="modal in">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close">×</button>
+          <div class="wizard">
+            <ul class="steps">
+              <li>
+                Step 1 - <a href="step_1.html">Instance &amp; Image</a>
+                <span class="chevron"></span>
+              </li>
+              <li class="active">
+                Step 2 - Flavor
+                <span class="chevron"></span>
+              </li>
+              <li>
+                Step 3 - <a href="step_3.html">Access &amp; Security</a>
+                <span class="chevron"></span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <hr/>
-        <a href="step_1.html">« Back</a>
-      </form>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-8 main">
+              <form class="form" role="form">
+                <div class="form-group">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>VCPUs</th>
+                        <th>Root / Ephemeral Disk</th>
+                        <th>RAM</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>m1.small</td>
+                        <td>1</td>
+                        <td>50 GB / 0 GB</td>
+                        <td>1,024 MB</td>
+                        <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
+                      </tr>
+                      <tr>
+                        <td>m1.medium</td>
+                        <td>2</td>
+                        <td>100 GB / 0 GB</td>
+                        <td>2,048 MB</td>
+                        <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
+                      </tr>
+                      <tr>
+                        <td>m2.medium</td>
+                        <td>2</td>
+                        <td>200 GB / 0 GB</td>
+                        <td>4,096 MB</td>
+                        <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
+                      </tr>
+                      <tr>
+                        <td>m1.large</td>
+                        <td>4</td>
+                        <td>400 GB / 0 GB</td>
+                        <td>16,384 MB</td>
+                        <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
+                      </tr>
+                      <tr>
+                        <td>m2.large</td>
+                        <td>4</td>
+                        <td>400 GB / 0 GB</td>
+                        <td>32,768 MB</td>
+                        <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
+                      </tr>
+                      <tr>
+                        <td>m1.xlarge</td>
+                        <td>6</td>
+                        <td>600 GB / 0 GB</td>
+                        <td>65,536 MB</td>
+                        <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
+                      </tr>
+                      <tr>
+                        <td>m1.mlarge</td>
+                        <td>12</td>
+                        <td>800 GB / 0 GB</td>
+                        <td>98,304 MB</td>
+                        <td><a href="step_3.html" class="btn btn-primary btn-xs">Select »</a></td>
+                      </tr>
+                    </tbody>
+                  </table>        
+                </div>
+                <hr/>
+              </form>
+            </div>
+            <div class="col-md-4 right-bar">
+              <h3>Step 2 - Flavor</h3>
+              <h3>Help texts</h3><h4>Lorem ipsum dolor sit amet</h4>
+              <p>
+                Consectetur adipiscing elit. Nullam vel rhoncus felis, id facilisis orci. Pellentesque eget tortor vitae est cursus gravida. Aenean eget mauris eu dolor luctus dictum. Etiam eget justo sem.
+              </p>
+              <h4>Duis vel quam porttitor</h4>
+              <p>Lacinia elit id, molestie turpis. Fusce vel posuere felis, eu ornare massa. Integer vitae lectus at dui iaculis auctor nec sed lorem. Fusce elementum ac nisl sit amet rutrum.
+              </p><p>
+              <span class="glyphicon glyphicon-info-sign"></span> <a href="https://docs.google.com/document/d/1hUdmyxpVxbYwgGtPbzDsBUXsv0_rtKbfgCHYxOgFjlo">Learn more about this prototype.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="pull-left btn btn-default" href="step_1.html">« Back to Instance &amp; Image</a>
+        Please choose a Flavor.
+        <button type="button" class="btn btn-default">Close</button>
+      </div>
     </div>
-    <div class="col-lg-3 right-bar">Help texts</div>
+  </div>
 </div>
-</div>
+<div class="modal-backdrop  in"></div>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
