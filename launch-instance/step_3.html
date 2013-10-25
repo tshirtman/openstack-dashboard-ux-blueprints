@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>OpenStack - Launch Instance</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-  <div class="navbar navbar-default navbar-static-top">
-  </div>
-  <div class="container">
-  <div class="row">
-    <div class="col-lg-2 left-bar">Menu</div>
-    <div class="col-lg-7 main">
-      <h2>Launch Instance</h2>
-      <form class="form" role="form">
-        <ol class="breadcrumb">
-          <li><a href="step_1.html">Instance</a></li>
-          <li><a href="step_2.html">Flavor</a></li>
-          <li class="active">Access &amp Security</li>
-        </ol>
-        <h3>Security</h3>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="input-group">
-                <select class="form-control">
-                  <option>No keypairs available</option>
-                </select>
-                <span class="input-group-btn"><a href="#" class="btn btn-default">+</a></span>
-              </div>
-            </div>
+<head>
+  <meta charset="utf-8">
+  <title>OpenStack - Launch Instance</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/wizard.css" rel="stylesheet">
+</head>
+<body>
+  <div class="left-bar"><img src="img/left-menu.png" alt="menu-mockup"/></div>
+  <div class="modal in">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close">×</button>
+          <div class="wizard">
+            <ul class="steps">
+              <li>
+                Step 1 - <a href="step_1.html">Instance &amp; Image</a>
+                <span class="chevron"></span>
+              </li>
+              <li>
+                Step 2 - <a href="step_2.html">Flavor</a>
+                <span class="chevron"></span>
+              </li>
+              <li class="active">
+                Step 3 - Access &amp; Security
+                <span class="chevron"></span>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="form-group">
+        <div class="modal-body">
           <div class="row">
-            <div class="col-lg-6">
-              <label class="control-label">Admin Pass</label>
-              <input type="email" class="form-control">
+            <div class="col-lg-8 main">
+              <form class="form" role="form">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h4>(Work in progress)</h4>
+                      <div class="input-group">
+                        <select class="form-control">
+                          <option>No keypairs available</option>
+                        </select>
+                        <span class="input-group-btn"><a href="#" class="btn btn-default">+</a></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <label class="control-label">Admin Pass</label>
+                      <input type="email" class="form-control">
+                    </div>
+                    <div class="col-lg-6">
+                      <label class="control-label">Confirm Admin Pass</label>
+                      <input type="email" class="form-control">
+                    </div>
+                  </div>         
+                </div>
+                <h3>Access</h3>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-lg-6 border-right">         
+                      <label class="control-label">Networks</label>
+                      <h6>Selected Networks</h6>
+                      <ul id="selected_network" class="networklist"></ul>
+                      <h6>Available networks</h6>
+                      <ul id="available_network" class="networklist">
+                        <li>internet<em class="network_id">(7b07d545-53da-4897-abbd-dfe142db0fc2)</em><a href="#" class="btn btn-primary btn-xs pull-right"> + </a></li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-6">
+                      <label class="control-label">Security Groups</label>
+                      <div class="input">
+                        <ul>
+                          <li>
+                            <label><input checked="checked" name="groups" type="checkbox" value="default"> Default
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="">Add post-creation script</a> 
+              </form>
             </div>
-            <div class="col-lg-6">
-              <label class="control-label">Confirm Admin Pass</label>
-              <input type="email" class="form-control">
-            </div>
-          </div>         
-        </div>
-        <h3>Access</h3>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-lg-6 border-right">         
-              <label class="control-label">Networks</label>
-              <h6>Selected Networks</h6>
-              <ul id="selected_network" class="networklist"></ul>
-              <h6>Available networks</h6>
-              <ul id="available_network" class="networklist">
-                <li>internet<em class="network_id">(7b07d545-53da-4897-abbd-dfe142db0fc2)</em><a href="#" class="btn btn-primary btn-xs pull-right"> + </a></li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <label class="control-label">Security Groups</label>
-              <div class="input">
-                <ul>
-                  <li>
-                    <label><input checked="checked" name="groups" type="checkbox" value="default"> Default
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <div class="col-md-4 right-bar">
+              <h3>Step 3 - Access &amp; Security</h3>
+              <h3>Help texts</h3><h4>Lorem ipsum dolor sit amet</h4>
+              <p>
+                Consectetur adipiscing elit. Nullam vel rhoncus felis, id facilisis orci. Pellentesque eget tortor vitae est cursus gravida. Aenean eget mauris eu dolor luctus dictum. Etiam eget justo sem.
+              </p>
+              <h4>Duis vel quam porttitor</h4>
+              <p>Lacinia elit id, molestie turpis. Fusce vel posuere felis, eu ornare massa. Integer vitae lectus at dui iaculis auctor nec sed lorem. Fusce elementum ac nisl sit amet rutrum.
+              </p><p>
+              <span class="glyphicon glyphicon-info-sign"></span> <a href="https://docs.google.com/document/d/1hUdmyxpVxbYwgGtPbzDsBUXsv0_rtKbfgCHYxOgFjlo">Learn more about this prototype.</a>
+            </p>
           </div>
         </div>
-        <hr/>
-        <a href="step_2.html">« Back</a> /
-        <a href="#" class="">Add post-creation script</a> 
+      </div>
+      <div class="modal-footer">
+        <a class="pull-left btn btn-default" href="step_1.html">« Back to Flavors</a>
+        <button type="button" class="btn btn-default">Close</button>
         <a href="#" class="btn btn-primary pull-right">Launch Instance</a>
-      </form>
+      </div>
     </div>
-    <div class="col-lg-3 right-bar">Help texts</div>
+  </div>
 </div>
-</div>
+<div class="modal-backdrop  in"></div>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>

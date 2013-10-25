@@ -1,49 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>OpenStack - Launch Instance</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-  <div class="navbar navbar-default navbar-static-top">
-  </div>
-  <div class="container">
-  <div class="row">
-    <div class="col-lg-2 left-bar">Menu</div>
-    <div class="col-lg-7 main">
-      <h2>Launch Instance</h2>
-      <form class="form" role="form">
-        <ol class="breadcrumb">
-          <li><a href="step_1.html">Instance</a></li>
-          <li class="active">Boot Volume</a></li>
-          <li><a href="step_2.html">Flavor</a></li>
-          <li><a href="step_3.html">Access &amp Security</a></li>
-        </ol>
-        <h3>Volume Details</h3>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-lg-8">
-              <label class="control-label">Device Name</label>
-              <input class="form-control">
-            </div>
-            <div class="col-lg-4">
-              <label class="control-label">Device Size (GB)</label>
-              <input class="form-control" value="1">
-            </div>
+<head>
+  <meta charset="utf-8">
+  <title>OpenStack - Launch Instance</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/wizard.css" rel="stylesheet">
+</head>
+<body>
+  <div class="left-bar"><img src="img/left-menu.png" alt="menu-mockup"/></div>
+  <div class="modal in">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close">×</button>
+          <div class="wizard">
+            <ul class="steps">
+              <li>
+                Step 1 - <a href="step_1.html">Instance &amp; Image</a>
+                <span class="chevron"></span>
+              </li>
+              <li class="active">
+                Step 2 - Boot Volume
+                <span class="chevron"></span>
+              </li>
+              <li>
+                Step 3 - <a href="step_2.html">Flavor</a>
+                <span class="chevron"></span>
+              </li>
+              <li>
+                Step 4 - <a href="step_3.html">Access &amp; Security</a>
+                <span class="chevron"></span>
+              </li>
+            </ul>
           </div>
-          <label>
-            <input checked="checked" name="groups" type="checkbox" value="default"> Delete on Terminate
-          </label> 
         </div>
-        <a href="#">« Back</a>
-        <a href="step_2.html" class="btn btn-primary pull-right">Choose Flavor »</a>
-      </form>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-8 main">
+              <form class="form" role="form">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <label class="control-label">Device Name</label>
+                      <input class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                      <label class="control-label">Device Size (GB)</label>
+                      <input class="form-control" value="1">
+                    </div>
+                  </div>
+                  <label>
+                    <input checked="checked" name="groups" type="checkbox" value="default"> Delete on Terminate
+                  </label> 
+                </div>
+                <a href="#">« Back</a>
+                <a href="step_2.html" class="btn btn-primary pull-right">Choose Flavor »</a>
+              </form>
+            </div>
+            <div class="col-md-4 right-bar">
+              <h3>Step 2 - Boot Volume</h3>
+              <h3>Help texts</h3><h4>Lorem ipsum dolor sit amet</h4>
+              <p>
+                Consectetur adipiscing elit. Nullam vel rhoncus felis, id facilisis orci. Pellentesque eget tortor vitae est cursus gravida. Aenean eget mauris eu dolor luctus dictum. Etiam eget justo sem.
+              </p>
+              <h4>Duis vel quam porttitor</h4>
+              <p>Lacinia elit id, molestie turpis. Fusce vel posuere felis, eu ornare massa. Integer vitae lectus at dui iaculis auctor nec sed lorem. Fusce elementum ac nisl sit amet rutrum.
+              </p><p>
+              <span class="glyphicon glyphicon-info-sign"></span> <a href="https://docs.google.com/document/d/1hUdmyxpVxbYwgGtPbzDsBUXsv0_rtKbfgCHYxOgFjlo">Learn more about this prototype.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="pull-left btn btn-default" href="step_1.html">« Back to Instance &amp; Image</a>
+        Edit Volume Details then <a href="step_2.html">Choose Flavor</a>. 
+        <button type="button" class="btn btn-default">Close</button>
+      </div>
     </div>
-    <div class="col-lg-3 right-bar">Help texts</div>
   </div>
-  </div>
+</div>
+<div class="modal-backdrop  in"></div>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
