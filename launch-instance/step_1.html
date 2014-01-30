@@ -6,7 +6,7 @@
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/wizard.css" rel="stylesheet">
-  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js"></script>
   <script type='text/javascript' src="js/horizon-ux.js"></script>
 </head>
 <body ng-app="horizon-ux">
@@ -72,27 +72,7 @@
                         <thead>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td rowspan="5"><h5>Images</h5></td>
-                            <td>Image name one</td>
-                            <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
-                          </tr>  
-                          <tr>
-                            <td>Image name two</td>
-                            <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
-                          </tr>   
-                          <tr>
-                            <td>Image name three</td>
-                            <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
-                          </tr> 
-                          <tr>
-                            <td>Image name four</td>
-                            <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
-                          </tr> 
-                          <tr>
-                            <td>Image name five</td>
-                            <td><a href="step_2.html" class="btn btn-primary btn-xs">Select »</a></td>
-                          </tr> 
+                          <div hz-select name='Images'>['image two', 'image two', 'image three', 'image four', 'image five']</div>
                           <tr class="active">
                             <td rowspan="4"><h5>Instance Snapshots</h5></td>
                             <td>Snapshot name one - Lorem Ipsum Lorem ipsum dolor sit.</td>

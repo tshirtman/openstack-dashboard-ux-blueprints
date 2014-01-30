@@ -1,3 +1,7 @@
-angular.module('horizon-ux', []).controller('ctrl', function($scope){
-  $scope.foo = 'bar';
+angular.module('HorizonUx', []).directive('hzSelect', function(){
+  return {
+    function(){
+      console.log('it works!');
+    }
+  };
 });
