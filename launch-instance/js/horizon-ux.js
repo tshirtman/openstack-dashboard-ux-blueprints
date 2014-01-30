@@ -1,7 +1,11 @@
-angular.module('HorizonUx', []).directive('hzSelect', function(){
+angular.module('horizon-ux', []).directive('hzSelect', function(){
+  'use strict';
   return {
-    function(){
-      console.log('it works!');
+    link: function($scope, element, attribute){
+      console.log('it works!', $scope.name);
+    },
+    scope: {
+      'name': '@'
     }
   };
 });
