@@ -6,10 +6,13 @@
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/wizard.css" rel="stylesheet">
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <script type='text/javascript' src="js/horizon-ux.js"></script>
 </head>
-<body>
+<body ng-app="horizon-ux">
 <div class="left-bar"><img src="img/left-menu.png" alt="menu-mockup"/></div>
-<div class="modal in">
+<div class="modal in" ng-controller="ctrl">
+  {{ foo }}
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
